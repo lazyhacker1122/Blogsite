@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarded Portal Access - DevSpace Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="animate-fade-up">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevSpace</a>
+        </div>
+    </nav>
+    <main class="container auth-wrapper">
+        <div class="auth-card">
+            <h2>Portal Verification</h2>
+            <p id="lockoutMsg" class="error-text" style="display:none;"></p>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Username / Email</label>
+                    <input type="text" id="loginUser" required placeholder="Enter alphanumeric token identity...">
+                </div>
+                <div class="form-group password-group">
+                    <label>Password Structure</label>
+                    <input type="password" id="loginPass" required placeholder="••••••••">
+                    <span class="toggle-password" onclick="togglePassVisibility('loginPass')">👁️</span>
+                </div>
+                <button type="submit" id="loginSubmitBtn" class="submit-btn">Verify Signature Access</button>
+            </form>
+            <p class="auth-footer-text">New profile node? <a href="signup.html">Register identity system metadata</a></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Registry System - DevSpace Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="animate-fade-up">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevSpace</a>
+        </div>
+    </nav>
+    <main class="container auth-wrapper">
+        <div class="auth-card">
+            <h2>Identity Node Registry</h2>
+            <div id="signupErrors" class="error-text" style="display:none;"></div>
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label>Desired Unique Username</label>
+                    <input type="text" id="regUser" required placeholder="Alphabetic characters only...">
+                </div>
+                <div class="form-group password-group">
+                    <label>Strong Cryptographic Key (Password)</label>
+                    <input type="password" id="regPass" required placeholder="Min 8 chars, 1 Upper, 1 Number, 1 Special...">
+                    <span class="toggle-password" onclick="togglePassVisibility('regPass')">👁️</span>
+                </div>
+                <button type="submit" class="submit-btn">Compile & Store Node Identity</button>
+            </form>
+            <p class="auth-footer-text">Already validated profile? <a href="login.html">Access secure node portal</a></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

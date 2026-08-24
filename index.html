@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create & Publish Blogs - Modern Developer Space</title>
+    <meta name="description" content="Empowering developers to create and share high-density technical insights across technology, education, and worldwide ecosystems seamlessly.">
+    <meta property="og:title" content="Create & Publish Blogs - Modern Developer Space">
+    <meta property="og:description" content="Empowering developers to create and share high-density technical insights.">
+    <link rel="canonical" href="https://example.com/index.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="animate-fade-up">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">DevSpace</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="blog.html">All Blogs</a>
+                <a href="technology.html">Technology</a>
+                <a href="education.html">Education</a>
+                <a href="worldwide.html">Worldwide</a>
+                <a href="about.html">About</a>
+                <a href="login.html" id="authLink">Login</a>
+                <button id="themeToggle" class="theme-btn">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="section-header">
+            <h1>Creator Dashboard</h1>
+            <p>Publish cross-vertical technical tutorials, architectural insights, and media packages.</p>
+        </header>
+
+        <section class="form-container">
+            <form id="postForm" onsubmit="handlePostSubmit(event)">
+                <div class="form-group">
+                    <label for="postTitle">Article Title</label>
+                    <input type="text" id="postTitle" required placeholder="e.g., Scaling Distributed Systems...">
+                </div>
+                <div class="form-group">
+                    <label for="postCategory">Target Classification Category</label>
+                    <select id="postCategory" required>
+                        <option value="technology">Technology 💻</option>
+                        <option value="education">Education 📚</option>
+                        <option value="worldwide">Worldwide 🌐</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Body Content (Markdown/Text Allowed)</label>
+                    <textarea id="postContent" rows="6" required placeholder="Write your verified technical deep-dive here..."></textarea>
+                </div>
+                <div class="media-upload-grid">
+                    <div class="file-upload-box">
+                        <label>Attach Picture (PNG/JPG)</label>
+                        <input type="file" id="postImage" accept="image/*" onchange="previewMedia('image')">
+                        <div id="imagePreview" class="preview-box"></div>
+                    </div>
+                    <div class="file-upload-box">
+                        <label>Attach Short Video (MP4)</label>
+                        <input type="file" id="postVideo" accept="video/*" onchange="previewMedia('video')">
+                        <div id="videoPreview" class="preview-box"></div>
+                    </div>
+                    <div class="file-upload-box">
+                        <label>Code Pack / Document (ZIP/PDF)</label>
+                        <input type="file" id="postFile" accept=".zip,.pdf" onchange="previewMedia('file')">
+                        <div id="filePreview" class="preview-box"></div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Publish to Dynamic Channel</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
