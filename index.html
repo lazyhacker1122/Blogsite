@@ -1,78 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create & Publish Blogs - Modern Developer Space</title>
-    <meta name="description" content="Empowering developers to create and share high-density technical insights across technology, education, and worldwide ecosystems seamlessly.">
-    <meta property="og:title" content="Create & Publish Blogs - Modern Developer Space">
-    <meta property="og:description" content="Empowering developers to create and share high-density technical insights.">
-    <link rel="canonical" href="https://example.com/index.html">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorldPulse Daily — Independent stories, global perspectives.</title>
+  <meta name="description" content="WorldPulse Daily brings original reporting, analysis and perspectives from around the world." />
+  <meta property="og:title" content="WorldPulse Daily" />
+  <meta property="og:description" content="Independent stories, global perspectives." />
+  <meta property="og:image" content="assets/lead-city.png" />
+  <link rel="canonical" href="https://worldpulse.example/" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="animate-fade-up">
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">DevSpace</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Dashboard</a>
-                <a href="blog.html">All Blogs</a>
-                <a href="technology.html">Technology</a>
-                <a href="education.html">Education</a>
-                <a href="worldwide.html">Worldwide</a>
-                <a href="about.html">About</a>
-                <a href="login.html" id="authLink">Login</a>
-                <button id="themeToggle" class="theme-btn">🌙</button>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header class="section-header">
-            <h1>Creator Dashboard</h1>
-            <p>Publish cross-vertical technical tutorials, architectural insights, and media packages.</p>
-        </header>
-
-        <section class="form-container">
-            <form id="postForm" onsubmit="handlePostSubmit(event)">
-                <div class="form-group">
-                    <label for="postTitle">Article Title</label>
-                    <input type="text" id="postTitle" required placeholder="e.g., Scaling Distributed Systems...">
-                </div>
-                <div class="form-group">
-                    <label for="postCategory">Target Classification Category</label>
-                    <select id="postCategory" required>
-                        <option value="technology">Technology 💻</option>
-                        <option value="education">Education 📚</option>
-                        <option value="worldwide">Worldwide 🌐</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="postContent">Body Content (Markdown/Text Allowed)</label>
-                    <textarea id="postContent" rows="6" required placeholder="Write your verified technical deep-dive here..."></textarea>
-                </div>
-                <div class="media-upload-grid">
-                    <div class="file-upload-box">
-                        <label>Attach Picture (PNG/JPG)</label>
-                        <input type="file" id="postImage" accept="image/*" onchange="previewMedia('image')">
-                        <div id="imagePreview" class="preview-box"></div>
-                    </div>
-                    <div class="file-upload-box">
-                        <label>Attach Short Video (MP4)</label>
-                        <input type="file" id="postVideo" accept="video/*" onchange="previewMedia('video')">
-                        <div id="videoPreview" class="preview-box"></div>
-                    </div>
-                    <div class="file-upload-box">
-                        <label>Code Pack / Document (ZIP/PDF)</label>
-                        <input type="file" id="postFile" accept=".zip,.pdf" onchange="previewMedia('file')">
-                        <div id="filePreview" class="preview-box"></div>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">Publish to Dynamic Channel</button>
-            </form>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="site-header">
+    <div class="utility"><div class="wrap utility-inner"><span>Wednesday, September 24, 2026</span><span class="utility-right"><a href="#newsletter">Newsletters</a><a href="#about">About WorldPulse</a><button id="editionBtn" class="text-btn">International ▾</button></span></div></div>
+    <div class="wrap masthead"><button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">☰</button><a class="wordmark" href="index.html">WorldPulse <i>Daily</i></a><div class="mast-actions"><button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button><button class="login">Log in</button><a class="subscribe" href="#newsletter">Subscribe</a></div></div>
+    <nav class="nav" id="mainNav" aria-label="Primary navigation"><div class="wrap nav-inner"><a class="active" href="#top">News</a><a href="#world">World</a><a href="#politics">Politics</a><a href="#business">Business</a><a href="#technology">Technology</a><a href="#science">Science</a><a href="#environment">Environment</a><a href="#health">Health</a><a href="#culture">Culture</a><a href="#lifestyle">Lifestyle</a><a href="#sports">Sports</a><a href="#opinion">Opinion</a><a href="#travel">Travel</a></div></nav>
+    <div class="searchbar wrap" id="searchbar"><label for="searchInput">Search WorldPulse</label><input id="searchInput" placeholder="Search stories, authors and topics" /><button id="closeSearch" aria-label="Close search">×</button><div id="searchResults"></div></div>
+  </header>
+  <main id="top">
+    <div class="ticker"><div class="wrap ticker-inner"><strong><span class="live-dot"></span> BREAKING</strong><div class="ticker-track" id="tickerTrack"><a href="#latest">Global markets steady as new trade corridor opens across three regions</a><a href="#world">Coastal cities unveil shared plan for heat-resilient neighborhoods</a><a href="#technology">Open research network publishes new climate data standard</a></div><span class="ticker-time">09:42 UTC</span></div></div>
+    <section class="wrap hero"><div class="hero-lead"><div class="image-wrap"><img src="assets/lead-city.png" alt="Commuters moving through a coastal city at dawn" /></div><div class="kicker">WORLD · EXCLUSIVE</div><h1>A new map of possibility is taking shape across the world's cities</h1><p class="standfirst">From neighborhood energy exchanges to cross-border rail, a generation of practical ideas is changing how communities share a future.</p><div class="byline">By <b>Mara Okafor</b> <span>·</span> 8 min read <span>·</span> 2 hours ago</div></div><div class="hero-side"><article class="story"><div class="kicker">SCIENCE</div><h2>Inside the quiet race to make clean power more dependable</h2><p>Researchers are redesigning the humble grid for a more variable world.</p><div class="byline">Jon Bell · 6 min</div></article><article class="story"><div class="kicker">POLITICS</div><h2>What the new generation of city mayors is promising voters</h2><p>Pragmatism, patience and a sharper focus on everyday services.</p><div class="byline">Nadia Rahman · 5 min</div></article><article class="story"><div class="kicker">THE BIG IDEA</div><h2>Why the next decade will be built around trust</h2><div class="byline">Analysis · 4 min</div></article></div></section>
+    <section class="wrap latest" id="latest"><div class="section-head"><h2>Latest news</h2><div class="tabs"><button class="tab active" data-tab="latest">Latest</button><button class="tab" data-tab="popular">Popular</button></div></div><div class="latest-grid" id="latestGrid"></div><button class="load-more" id="loadMore">Load more stories</button></section>
+    <section class="wrap split-section" id="world"><div class="section-head"><h2>World</h2><a href="#world">View all →</a></div><div class="feature-grid"><article class="feature-card wide"><div class="kicker">WORLD</div><h3>Across borders, local solutions are becoming global lessons</h3><p>Communities are trading knowledge faster than ever — and asking new questions about who gets to shape the future.</p><div class="byline">Leila Haddad · 7 min</div></article><div class="mini-list"><article><span>01</span><div><div class="kicker">ASIA PACIFIC</div><h3>Small ports find a second life in the green shipping era</h3></div></article><article><span>02</span><div><div class="kicker">EUROPE</div><h3>The library network quietly reconnecting rural readers</h3></div></article><article><span>03</span><div><div class="kicker">AMERICAS</div><h3>A morning with the volunteers mapping city trees</h3></div></article></div></div></section>
+    <section class="wrap report"><div class="report-copy"><div class="kicker">SPECIAL REPORT</div><h2>Inside the changing world of artificial intelligence</h2><p>A reported collection about the people building, questioning and living with the most consequential technology of our time.</p><a class="outline" href="#technology">Explore the report →</a></div><img src="assets/tech-lab.png" alt="Researcher working in a modern technology laboratory" /></section>
+    <section class="wrap section-row" id="technology"><div class="section-head"><h2>Technology</h2><a href="#technology">View all →</a></div><div class="cards-3"><article class="card"><div class="card-image tech-image"></div><div class="kicker">TECHNOLOGY</div><h3>Open tools are giving small teams a bigger voice</h3><p>Builders are choosing shared infrastructure over closed ecosystems.</p><div class="byline">Ibrahim Khan · 5 min</div></article><article class="card"><div class="kicker">CYBERSECURITY</div><h3>The human habit that keeps phishing campaigns alive</h3><p>Better systems start with clearer signals and kinder design.</p><div class="byline">Mina Wu · 4 min</div></article><article class="card dark-card"><div class="kicker">IN FOCUS · AUDIO</div><h3>Listen: The engineers rethinking the everyday web</h3><button class="play" id="playAudio">▶ Play 18:42</button><div class="byline">WorldPulse Audio</div></article></div></section>
+    <section class="wrap environment" id="environment"><div><div class="kicker">ENVIRONMENT</div><h2>The restoration projects proving nature can rebound</h2><p>From tidal wetlands to urban forests, a closer look at patient work with a measurable impact.</p><div class="byline">Sofia Alvarez · 9 min</div></div><img src="assets/climate-coast.png" alt="Restored coastal wetland with mangroves at golden hour" /></section>
+    <section class="wrap opinion" id="opinion"><div class="section-head"><h2>Opinion & analysis</h2><a href="#opinion">View all →</a></div><div class="opinion-grid"><article><div class="avatar">NA</div><div><div class="kicker">COMMENTARY</div><h3>Public life needs more room for unfinished ideas</h3><p>By Nia Adeyemi</p></div></article><article><div class="avatar blue">DR</div><div><div class="kicker">ANALYSIS</div><h3>The real test of a resilient economy is ordinary time</h3><p>By Daniel Reyes</p></div></article><article><div class="avatar gold">SK</div><div><div class="kicker">EDITORIAL</div><h3>Let evidence be the starting point of every argument</h3><p>WorldPulse Editorial Board</p></div></article></div></section>
+    <section class="wrap focus"><div class="section-head"><h2>In focus</h2><span class="muted">Stories to spend time with</span></div><div class="focus-grid"><div class="focus-tile photo"><span>PHOTO</span><h3>The last light on the northern road</h3></div><div class="focus-tile video"><span>VIDEO</span><h3>One river, three communities</h3></div><div class="focus-tile audio"><span>AUDIO</span><h3>Letters from a changing coast</h3></div></div></section>
+    <section class="wrap bottom-grid"><div class="trending"><div class="section-head"><h2>Trending now</h2><span class="muted">Today</span></div><ol><li><span>01</span><a>What a slower news cycle could teach us about attention</a></li><li><span>02</span><a>The global food ingredient quietly returning to kitchens</a></li><li><span>03</span><a>Five questions about the new space telescope</a></li><li><span>04</span><a>How a school built its own weather station</a></li></ol></div><aside class="newsletter" id="newsletter"><div class="kicker">THE DAILY BRIEF</div><h2>The world, made clear.</h2><p>The biggest global stories and smartest perspectives, delivered every morning.</p><form id="newsletterForm"><input type="email" required placeholder="Your email address" aria-label="Email address" /><button>Subscribe</button></form><small>By subscribing, you agree to our privacy policy. Unsubscribe anytime.</small><div id="newsletterMessage" role="status"></div></aside></section>
+  </main>
+  <footer id="about"><div class="wrap footer-top"><div><a class="wordmark" href="#top">WorldPulse <i>Daily</i></a><p>Independent stories, global perspectives.</p></div><div class="footer-links"><a>About</a><a>Contact</a><a>Editorial policy</a><a>Corrections</a><a>Privacy</a><a>Terms</a><a>Advertising</a><a>RSS</a></div><div class="footer-social"><span>Follow the world</span><div><button>𝕏</button><button>in</button><button>◎</button></div></div></div><div class="wrap copyright">© 2026 WorldPulse Daily · Original reporting for a connected world.</div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
