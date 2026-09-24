@@ -1,10 +1,12 @@
 const stories=[
-['WORLD','A new map of possibility is taking shape across the world’s cities','Communities are building practical answers to shared challenges.','Mara Okafor','assets/lead-city.png'],
-['TECHNOLOGY','Open tools are giving small teams a bigger voice','Builders are choosing shared infrastructure over closed ecosystems.','Ibrahim Khan','assets/tech-lab.png'],
-['ENVIRONMENT','The restoration projects proving nature can rebound','A closer look at patient work with a measurable impact.','Sofia Alvarez','assets/climate-coast.png'],
-['BUSINESS','The patient capital behind a more useful economy','Founders and funders are rethinking what growth should mean.','Daniel Reyes','assets/lead-city.png'],
-['HEALTH','The neighborhood clinics changing preventative care','A new model puts trust before treatment.','Amara Bello','assets/climate-coast.png'],
-['CULTURE','The artists making room for a slower internet','Their work asks us to look, listen and stay a little longer.','Nadia Rahman','assets/tech-lab.png']
+['WORLD','How cities around the world are changing','From public transportation to green spaces and affordable housing, urban planners are looking for ways to make cities more comfortable and sustainable.','Mara Okafor','assets/lead-city.png'],
+['TECHNOLOGY','How AI assistants are changing everyday tasks','AI tools can help people write, summarize, translate and organize information — when paired with careful human judgment.','Ibrahim Khan','assets/tech-lab.png'],
+['ENVIRONMENT','Why urban trees matter more than ever','Carefully planned vegetation can cool public spaces, support biodiversity and make dense neighborhoods more comfortable.','Sofia Alvarez','assets/climate-coast.png'],
+['BUSINESS','Why small businesses are moving online','Digital tools can help local companies reach new customers, but trust and consistent service remain essential.','Daniel Reyes','assets/lead-city.png'],
+['HEALTH','Why regular walking matters','Short, consistent movement breaks can support cardiovascular health, mobility and general fitness.','Amara Bello','assets/climate-coast.png'],
+['CULTURE','How music connects different generations','New sounds borrow from earlier traditions while streaming and social platforms help familiar songs find new audiences.','Nadia Rahman','assets/tech-lab.png'],
+['SCIENCE','How satellites help scientists understand Earth','Repeated observations of weather, oceans, forests and ice give researchers a view that is difficult to gather from the ground.','Jon Bell','assets/climate-coast.png'],
+['POLITICS','Why public policy takes time to change','Legislation, consultation, budgets and implementation all shape the journey from a public announcement to a working service.','Nadia Rahman','assets/lead-city.png']
 ];
 const grid=document.getElementById('latestGrid');let count=3;
 function renderStories(){grid.innerHTML=stories.slice(0,count).map(s=>`<article class="latest-card"><img src="${s[4]}" alt="Original editorial illustration for ${s[1]}"><div class="kicker">${s[0]}</div><h3><a href="#article">${s[1]}</a></h3><p>${s[2]}</p><div class="byline">${s[3]} · 6 min · 2h ago</div></article>`).join('');document.getElementById('loadMore').style.display=count>=stories.length?'none':'block'}
